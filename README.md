@@ -3,6 +3,8 @@ A fork/clone of the original from [codeplex](https://archive.codeplex.com/?p=sel
 
 Since CodePlex has closed down and archived its projects, and the original developer may not be maintaining it anymore. I figure GH here would be a better medium for others to continue work on it (improvements, bug fixes), via further forking and PRs.
 
+See [wiki](https://github.com/daluu/seleniumexceladdin/wiki) section for usage info (same info from CodePlex).
+
 For background, some useful reference links relating to the project (might need (Google) translate, if not native Japanese speaker):
 
 * https://groups.google.com/forum/#!topic/seleniumjp/GQxQJpbtnHA
