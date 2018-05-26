@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toggleListPaneVisibleButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAD2klEQVRYR92XS28bZRiFvUDi
+        IrVIiCaL8g8qfkA3UMQvQIIFG7aITSPUVg1NY1K3CW0oCaFVFJpyaReVQqEiUuNGYoGQEKygQBwnviW+
+        jC/xbez4kmnt8eE9Xzxu0tjFE0grcaST783M+/o8+b44zjgAPFFTTx10uW/3np1Hj+sOes7ssSWDWcxk
+        NgH29brmMX03j6nfsrjy+96aGcxiJrMJcODFM27MeIvo/fhPHBz7Cy/tkfnazGAWM5lNgJ4XhtyYD1Vw
+        +EsfXvnajyPXOvs1+npAre3uP8p8bWYwi5nMVgDPO+fwU8TAGzMRvHmzs9+6GcXbt2J453tNrfy+Xd+j
+        zAxmMbMF8NzpOfmF7F6O979rVrsXM1sAzwxsAiwtehBY9iLgW4JvWez3wx8IIBAIqtrrXVR9jr5bavV4
+        FrDg8cCzuNiVVe/Cgppl5g6AcMiPd6/9gveu/4pYJIyzIxcw5BrGB4Mfou/YCQRDIdVnASz7fFjyB7Ds
+        D3Zl1SszVFuAeDiEZCyCWCwGTYu3Vi2eQFTqlZUV1WcBBGVnAsGQgK10ZdUrM9RDALfVxUQ0DD2loSBO
+        xTUkEkkkU2vKcamjkYjqswBWV1exGo7Ys8xQzNwBkE5oODpzF33f/IFcZg0XLo7h3EejcLrO4Xj/KQFK
+        qD4LIBKNIhLT7FlmqLYA+bUE9EwamUwW2Vy+tdJpqZPJpOpz9G2+C+Kapo7HjjlDtQXQ5ac2ClkYxSwK
+        +SzyeR16oaickzqTzqg+x9FNgFQq1Tqibs0Zqi1AWc/g2KwXx2eXsFEqYPzTzzDKYxg5j/7TThT0vOqz
+        ALKyW+lMxpY5Q20HOLUJYKzrKJfKqFSqqIq31iWp1wsF1WcB6LkccnI8dswZipk7AcpFVKtVbBgGjHvG
+        troidbm0rvosgKIA6TbNGWobwNNNANOo4ORcCP1ueb/XDFyanMLYxCWcH/0EziEXDGND9VkA5XIJ6yV7
+        5gzFzB0ADDVrdZhmA42GAG2p63UT9417qs0CMGRXeER2zBmqPYB5X77UxHWgISuTt6hR570HADU5GoNH
+        ZMOcodoDoIGBHzRlaurKVVye/BwXxyfgGh5R1ygLoGHWUavVbJkzVAeA7mQBENg0TVvmDPUfAexeHQEG
+        f0zBKaamv/gKk1PTGJ+4jGH5Y2RpTwG60f8P4NnmZ0G3sj4N/42Y2QLY73Q3L3cnx4nZZrV7MdMCONA7
+        8K2HF0jFrelk3t836Jb/6e+o9Z/625kzzOo5eeNnZhNgv/hl8RHx64/Jr4oPidWjGR8QCUEabsnjMLMY
+        rh5On6Acjr8B3suoE+4BsMkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toggleListPaneVisibleButton.Label" xml:space="preserve">
+    <value>テスト一覧</value>
+  </data>
+  <data name="createScenarioButton.Label" xml:space="preserve">
+    <value>テスト作成</value>
+  </data>
+  <data name="createTestDataButton.Label" xml:space="preserve">
+    <value>データ作成</value>
+  </data>
+  <data name="syntaxCheckButton.Label" xml:space="preserve">
+    <value>文法チェック</value>
+  </data>
+  <data name="baseUrlButton.Label" xml:space="preserve">
+    <value>ベースURL</value>
+  </data>
+  <data name="importTestcaseButton.Label" xml:space="preserve">
+    <value>インポート</value>
+  </data>
+  <data name="importTestcaseButton.SuperTip" xml:space="preserve">
+    <value>Selenium IDE のテストケースをインポート</value>
+  </data>
+  <data name="mainGroup.Label" xml:space="preserve">
+    <value>テストケース</value>
+  </data>
+  <data name="runButton.Label" xml:space="preserve">
+    <value>すべて実行</value>
+  </data>
+  <data name="runOnlyFailedButton.Label" xml:space="preserve">
+    <value>失敗したテスト</value>
+  </data>
+  <data name="runCurrentButton.Label" xml:space="preserve">
+    <value>選択中のテスト</value>
+  </data>
+  <data name="group1.Label" xml:space="preserve">
+    <value>テスト実行</value>
+  </data>
+  <data name="recordEvidenceButton.Label" xml:space="preserve">
+    <value>自動記録</value>
+  </data>
+  <data name="deleteAllEvidenceButton.Label" xml:space="preserve">
+    <value>全て削除</value>
+  </data>
+  <data name="nextButton.Label" xml:space="preserve">
+    <value>次</value>
+  </data>
+  <data name="prevButton.Label" xml:space="preserve">
+    <value>前</value>
+  </data>
+  <data name="evidenceGroup.Label" xml:space="preserve">
+    <value>エビデンス</value>
+  </data>
+  <data name="browserGroup.Label" xml:space="preserve">
+    <value>ブラウザ</value>
+  </data>
+  <data name="showVersionButton.Label" xml:space="preserve">
+    <value>バージョン情報</value>
+  </data>
+  <data name="helpButton.Label" xml:space="preserve">
+    <value>リファレンス</value>
+  </data>
+  <data name="helpGroup.Label" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="failedEvidenceRecordButton.Label" xml:space="preserve">
+    <value>失敗を記録</value>
+  </data>
+  <data name="passedEvidenceRecordButton.Label" xml:space="preserve">
+    <value>成功を記録</value>
+  </data>
+</root>

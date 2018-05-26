@@ -1,0 +1,134 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{88E6F48B-7427-4531-AFEC-E270F5931E1C}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SeleniumExcelAddIn.vsmdi = SeleniumExcelAddIn.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3B728576-FB39-48D5-8ADC-7D340D1CCBD4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleFiles", "SampleFiles", "{81F97535-E5BE-4EA2-A18E-A96E44D759A2}"
+	ProjectSection(SolutionItems) = preProject
+		TestFiles\selenium-excel-addin-sample.xlsx = TestFiles\selenium-excel-addin-sample.xlsx
+		TestFiles\selenium-excel-addin-vba.xlsm = TestFiles\selenium-excel-addin-vba.xlsm
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumExcelAddIn", "SeleniumExcelAddIn\SeleniumExcelAddIn.csproj", "{E606C538-0731-4463-9308-E200DA549CEB}"
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "SeleniumExcelAddIn.Setup", "SeleniumExcelAddIn.Setup\SeleniumExcelAddIn.Setup.isproj", "{660A7C42-F735-4EE3-833C-CD9F03A04E2C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E606C538-0731-4463-9308-E200DA549CEB} = {E606C538-0731-4463-9308-E200DA549CEB}
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15} = {78E6CED1-1BF3-489F-9808-A11CEEDA6D15}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumExcelAddIn.Test", "SeleniumExcelAddIn.Test\SeleniumExcelAddIn.Test.csproj", "{643D731D-06CC-46F1-B494-954F012A8431}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E606C538-0731-4463-9308-E200DA549CEB} = {E606C538-0731-4463-9308-E200DA549CEB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumExcelAddIn.AdvancedWebBrowser", "SeleniumExcelAddIn.AdvancedWebBrowser\SeleniumExcelAddIn.AdvancedWebBrowser.csproj", "{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumExcelAddIn.AdvancedWebBrowserApp", "SeleniumExcelAddIn.AdvancedWebBrowserApp\SeleniumExcelAddIn.AdvancedWebBrowserApp.csproj", "{340C895D-3F7E-48C0-89BC-A5F207897A33}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs31
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SeleniumExcelAddIn\\SeleniumExcelAddIn.csproj
+		SccProjectName1 = SeleniumExcelAddIn
+		SccLocalPath1 = SeleniumExcelAddIn
+		SccProjectUniqueName2 = SeleniumExcelAddIn.Setup\\SeleniumExcelAddIn.Setup.isproj
+		SccProjectName2 = SeleniumExcelAddIn.Setup
+		SccLocalPath2 = SeleniumExcelAddIn.Setup
+		SccProjectUniqueName3 = SeleniumExcelAddIn.Test\\SeleniumExcelAddIn.Test.csproj
+		SccProjectName3 = SeleniumExcelAddIn.Test
+		SccLocalPath3 = SeleniumExcelAddIn.Test
+		SccProjectUniqueName4 = SeleniumExcelAddIn.AdvancedWebBrowser\\SeleniumExcelAddIn.AdvancedWebBrowser.csproj
+		SccProjectName4 = SeleniumExcelAddIn.AdvancedWebBrowser
+		SccLocalPath4 = SeleniumExcelAddIn.AdvancedWebBrowser
+		SccProjectUniqueName5 = SeleniumExcelAddIn.AdvancedWebBrowserApp\\SeleniumExcelAddIn.AdvancedWebBrowserApp.csproj
+		SccProjectName5 = SeleniumExcelAddIn.AdvancedWebBrowserApp
+		SccLocalPath5 = SeleniumExcelAddIn.AdvancedWebBrowserApp
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SeleniumExcelAddIn.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E606C538-0731-4463-9308-E200DA549CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E606C538-0731-4463-9308-E200DA549CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E606C538-0731-4463-9308-E200DA549CEB}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{E606C538-0731-4463-9308-E200DA549CEB}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{E606C538-0731-4463-9308-E200DA549CEB}.Debug|x86.ActiveCfg = Debug|x86
+		{E606C538-0731-4463-9308-E200DA549CEB}.Debug|x86.Build.0 = Debug|x86
+		{E606C538-0731-4463-9308-E200DA549CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E606C538-0731-4463-9308-E200DA549CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E606C538-0731-4463-9308-E200DA549CEB}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{E606C538-0731-4463-9308-E200DA549CEB}.Release|Mixed Platforms.Build.0 = Release|x86
+		{E606C538-0731-4463-9308-E200DA549CEB}.Release|x86.ActiveCfg = Release|x86
+		{E606C538-0731-4463-9308-E200DA549CEB}.Release|x86.Build.0 = Release|x86
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Debug|Any CPU.ActiveCfg = SingleImage
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Debug|Mixed Platforms.ActiveCfg = DVD-5
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Debug|x86.ActiveCfg = SingleImage
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Release|Any CPU.ActiveCfg = SingleImage
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Release|Any CPU.Build.0 = SingleImage
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Release|Mixed Platforms.ActiveCfg = CD_ROM
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Release|Mixed Platforms.Build.0 = CD_ROM
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Release|x86.ActiveCfg = SingleImage
+		{660A7C42-F735-4EE3-833C-CD9F03A04E2C}.Release|x86.Build.0 = SingleImage
+		{643D731D-06CC-46F1-B494-954F012A8431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643D731D-06CC-46F1-B494-954F012A8431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643D731D-06CC-46F1-B494-954F012A8431}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{643D731D-06CC-46F1-B494-954F012A8431}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{643D731D-06CC-46F1-B494-954F012A8431}.Debug|x86.ActiveCfg = Debug|x86
+		{643D731D-06CC-46F1-B494-954F012A8431}.Debug|x86.Build.0 = Debug|x86
+		{643D731D-06CC-46F1-B494-954F012A8431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{643D731D-06CC-46F1-B494-954F012A8431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{643D731D-06CC-46F1-B494-954F012A8431}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{643D731D-06CC-46F1-B494-954F012A8431}.Release|x86.ActiveCfg = Release|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Debug|x86.ActiveCfg = Debug|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Debug|x86.Build.0 = Debug|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Release|Any CPU.ActiveCfg = Release|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Release|Mixed Platforms.Build.0 = Release|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Release|x86.ActiveCfg = Release|x86
+		{78E6CED1-1BF3-489F-9808-A11CEEDA6D15}.Release|x86.Build.0 = Release|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Debug|x86.ActiveCfg = Debug|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Debug|x86.Build.0 = Debug|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Release|Any CPU.ActiveCfg = Release|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Release|Mixed Platforms.Build.0 = Release|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Release|x86.ActiveCfg = Release|x86
+		{340C895D-3F7E-48C0-89BC-A5F207897A33}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

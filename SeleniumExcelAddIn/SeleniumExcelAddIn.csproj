@@ -1,0 +1,1245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--
+    This section defines project-level properties.
+
+    AssemblyName
+      Name of the output assembly.
+    Configuration
+      Specifies a default value for debug.
+    OutputType
+      Must be "Library" for VSTO.
+    Platform
+      Specifies what CPU the output of this project can run on.
+    NoStandardLibraries
+      Set to "false" for VSTO.
+    RootNamespace
+      In C#, this specifies the namespace given to new files. In VB, all objects are
+      wrapped in this namespace at runtime.
+  -->
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>publish\</PublishUrl>
+    <InstallUrl />
+    <TargetCulture>en</TargetCulture>
+    <ApplicationVersion>1.0.1.3</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateInterval>0</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <ProductName>SeleniumExcelAddIn</ProductName>
+    <PublisherName>Takashi Yoshizawa</PublisherName>
+    <SupportUrl>http://selenium-excel-addin.jpn.org</SupportUrl>
+    <FriendlyName>SeleniumExcelAddIn</FriendlyName>
+    <OfficeApplicationDescription />
+    <LoadBehavior>3</LoadBehavior>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E606C538-0731-4463-9308-E200DA549CEB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RootNamespace>SeleniumExcelAddIn</RootNamespace>
+    <AssemblyName>SeleniumExcelAddIn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <DefineConstants>VSTO40</DefineConstants>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <VSTO_TrustAssembliesLocation>true</VSTO_TrustAssembliesLocation>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>False</IsWebBootstrapper>
+  </PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 4.5
+</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <!--
+      OfficeApplication
+        Add-in host application
+    -->
+    <OfficeApplication>Excel</OfficeApplication>
+  </PropertyGroup>
+  <!--
+    This section defines properties that are set when the "Debug" configuration is selected.
+
+    DebugSymbols
+      If "true", create symbols (.pdb). If "false", do not create symbols.
+    DefineConstants
+      Constants defined for the preprocessor.
+    EnableUnmanagedDebugging
+      If "true", starting the debugger will attach both managed and unmanaged debuggers.
+    Optimize
+      If "true", optimize the build output. If "false", do not optimize.
+    OutputPath
+      Output path of project relative to the project file.
+    WarningLevel
+      Warning level for the compiler.
+  -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <!--
+    This section defines properties that are set when the "Release" configuration is selected.
+
+    DebugSymbols
+      If "true", create symbols (.pdb). If "false", do not create symbols.
+    DefineConstants
+      Constants defined for the preprocessor.
+    EnableUnmanagedDebugging
+      If "true", starting the debugger will attach both managed and unmanaged debuggers.
+    Optimize
+      If "true", optimize the build output. If "false", do not optimize.
+    OutputPath
+      Output path of project relative to the project file.
+    WarningLevel
+      Warning level for the compiler.
+  -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!--
+    This section enables pre- and post-build steps. However, in VSTO use
+    MSBuild tasks instead of these properties.       
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>VSTO40;DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SeleniumExcelAddIn.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>VSTO40;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SeleniumExcelAddIn.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SeleniumExcelAddIn.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>85E2966D121A655ACEAB15B3E6FB378BEF3C0CD8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <!--
+    This section specifies references for the project.
+  -->
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Windows7APICodePack-Core.1.1.0.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Windows7APICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SgmlReaderDll">
+      <HintPath>..\packages\SgmlReader.1.8.11\lib\4.0\SgmlReaderDll.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.2.2\lib\net40\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.2.2\lib\net40\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.2.2\lib\net40\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.3\lib\net40\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Forms">
+      <HintPath>..\packages\Rx-WinForms.2.2.2\lib\net40\System.Reactive.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebDriver, Version=2.41.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.WebDriver.2.41.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.41.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.Support.2.41.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <!--
+    This section defines the user source files that are part of the project.
+     
+    A "Compile" element specifies a source file to compile.
+    An "EmbeddedResource" element specifies an .resx file for embedded resources.
+    A "None" element specifies a file that is not to be passed to the compiler (for instance, 
+    a text file or XML file).
+    The "AppDesigner" element specifies the directory where the application properties files
+    can be found.
+  -->
+  <ItemGroup>
+    <Compile Include="ActionAttribute.cs" />
+    <Compile Include="ActionFlags.cs" />
+    <Compile Include="ActionId.cs" />
+    <Compile Include="ActionManager.cs" />
+    <Compile Include="Actions\BaseUrlAction.cs" />
+    <Compile Include="Actions\CheckNewVersionAction.cs" />
+    <Compile Include="Actions\TestDataAddAction.cs" />
+    <Compile Include="Actions\EvidenceDeleteAllAction.cs" />
+    <Compile Include="Actions\EvidenceNextAction.cs" />
+    <Compile Include="Actions\EvidencePrevAction.cs" />
+    <Compile Include="Actions\EvidenceRecordFailedAction.cs" />
+    <Compile Include="Actions\HelpAction.cs" />
+    <Compile Include="Actions\ImportTestcaseAction.cs" />
+    <Compile Include="Actions\RefreshAction.cs" />
+    <Compile Include="Actions\RunAction.cs" />
+    <Compile Include="Actions\RunCurrentAction.cs" />
+    <Compile Include="Actions\TestCaseAddAction.cs" />
+    <Compile Include="Actions\TestCaseCheckedAllAction.cs" />
+    <Compile Include="Actions\TestCaseCheckedToggleAllAction.cs" />
+    <Compile Include="Actions\TestCaseUncheckedAllAction.cs" />
+    <Compile Include="Actions\ShowVersionAction.cs" />
+    <Compile Include="Actions\ToggleListPaneVisibleAction.cs" />
+    <Compile Include="Actions\WebDriverChromeAction.cs" />
+    <Compile Include="Actions\WebDriverFirefoxAction.cs" />
+    <Compile Include="Actions\WebDriverInternetExplorerAction.cs" />
+    <Compile Include="Actions\RunOnlyFailedAction.cs" />
+    <Compile Include="Actions\SyntaxCheckAction.cs" />
+    <Compile Include="Actions\EvidenceRecordPassedAction.cs" />
+    <Compile Include="Actions\ToggleHelpPaneVisibleAction.cs" />
+    <Compile Include="Actions\RecordingAction.cs" />
+    <Compile Include="Actions\ReportAction.cs" />
+    <Compile Include="Actions\RecordingStopAction.cs" />
+    <Compile Include="Actions\RecordingStartAction.cs" />
+    <Compile Include="ActionValidatorAttribute.cs" />
+    <Compile Include="ActionValidators\ListRowActionValidator.cs" />
+    <Compile Include="ActionValidators\NoneActionValidator.cs" />
+    <Compile Include="ActionValidators\WorkbookEditableActionValidator.cs" />
+    <Compile Include="ActionValidators\WorkbookPresentActionValidator.cs" />
+    <Compile Include="ActionValidators\WorksheetEditableActionValidator.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="AppContext.cs" />
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="AttributeLocator.cs" />
+    <Compile Include="CheckForNewVersion.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="CustomProfessionalColorTable.cs" />
+    <Compile Include="DisableScreenUpdating.cs" />
+    <Compile Include="DispatchDictionary.cs" />
+    <Compile Include="ElementLocator.cs" />
+    <Compile Include="ExcelWorkbookCustomPropertyAccessor.cs" />
+    <Compile Include="ExcelWorkbookCustomXmlAccessor.cs" />
+    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="ExcelWorksheetCustomPropertyAccessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAction.cs" />
+    <Compile Include="IActionValidator.cs" />
+    <Compile Include="IAppContext.cs" />
+    <Compile Include="ITestContext.cs" />
+    <Compile Include="IWindowContext.cs" />
+    <Compile Include="IWindowContextManager.cs" />
+    <Compile Include="OfficeVersion.cs" />
+    <Compile Include="Recorder\CommandRecorder.cs" />
+    <Compile Include="Recorder\CommandRecorderEventArgs.cs" />
+    <Compile Include="Recorder\IE.cs" />
+    <Compile Include="Recorder\LocateDetector.cs" />
+    <Compile Include="Recorder\RecordingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recorder\RecordingForm.Designer.cs">
+      <DependentUpon>RecordingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recorder\WIN32API.cs" />
+    <Compile Include="TestCommandHelper.cs" />
+    <Compile Include="TestAssertFailedException.cs" />
+    <Compile Include="TestCommandFactory.cs" />
+    <Compile Include="TestCommandResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestCommandResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestCommandSyntax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestCommands\NotSupprted\x_AddLocationStrategyAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AddLocationStrategyCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AddScriptAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AddScriptCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AddSelectionAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AddSelectionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AllowNativeXpathAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AllowNativeXpathCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AltKeyDownAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AltKeyDownCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AltKeyUpAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AltKeyUpCommand.cs" />
+    <Compile Include="TestCommands\AnswerOnNextPromptCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertAllButtonsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertAllFieldsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertAllLinksCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertAllWindowIdsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertAllWindowNamesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertAllWindowTitlesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertAttributeFromAllWindowsCommand.cs" />
+    <Compile Include="TestCommands\AssertBodyTextCommand.cs" />
+    <Compile Include="TestCommands\AssertConfirmationCommand.cs" />
+    <Compile Include="TestCommands\AssertConfirmationNotPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertConfirmationPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertCookieByNameCommand.cs" />
+    <Compile Include="TestCommands\AssertCookieCommand.cs" />
+    <Compile Include="TestCommands\AssertCookieNotPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertCookiePresentCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertCursorPositionCommand.cs" />
+    <Compile Include="TestCommands\AssertEditableCommand.cs" />
+    <Compile Include="TestCommands\AssertElementHeightCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertElementIndexCommand.cs" />
+    <Compile Include="TestCommands\AssertElementPositionLeftCommand.cs" />
+    <Compile Include="TestCommands\AssertElementPositionTopCommand.cs" />
+    <Compile Include="TestCommands\AssertElementWidthCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertEvalCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertHtmlSourceCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertMouseSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotAllButtonsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotAllFieldsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotAllLinksCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotAllWindowIdsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotAllWindowNamesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotAllWindowTitlesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotAttributeFromAllWindowsCommand.cs" />
+    <Compile Include="TestCommands\AssertNotBodyTextCommand.cs" />
+    <Compile Include="TestCommands\AssertNotCheckedCommand.cs" />
+    <Compile Include="TestCommands\AssertNotConfirmationCommand.cs" />
+    <Compile Include="TestCommands\AssertNotCookieByNameCommand.cs" />
+    <Compile Include="TestCommands\AssertNotCookieCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotCursorPositionCommand.cs" />
+    <Compile Include="TestCommands\AssertNotEditableCommand.cs" />
+    <Compile Include="TestCommands\AssertNotElementHeightCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotElementIndexCommand.cs" />
+    <Compile Include="TestCommands\AssertNotElementPositionLeftCommand.cs" />
+    <Compile Include="TestCommands\AssertNotElementPositionTopCommand.cs" />
+    <Compile Include="TestCommands\AssertNotElementWidthCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotEvalCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotHtmlSourceCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotMouseSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotOrderedCommand.cs" />
+    <Compile Include="TestCommands\AssertNotPromptCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectedIdCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectedIdsCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectedIndexCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectedIndexesCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectedLabelCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectedLabelsCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectedValueCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectedValuesCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSelectOptionsCommand.cs" />
+    <Compile Include="TestCommands\AssertNotSomethingSelectedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotTableCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotWhetherThisFrameMatchFrameExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotWhetherThisWindowMatchWindowExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertNotXpathCountCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertOrderedCommand.cs" />
+    <Compile Include="TestCommands\AssertPromptCommand.cs" />
+    <Compile Include="TestCommands\AssertPromptNotPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertPromptPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectedIdCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectedIdsCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectedIndexCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectedIndexesCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectedLabelCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectedLabelsCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectedValueCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectedValuesCommand.cs" />
+    <Compile Include="TestCommands\AssertSelectOptionsCommand.cs" />
+    <Compile Include="TestCommands\AssertSomethingSelectedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertTableCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertWhetherThisFrameMatchFrameExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertWhetherThisWindowMatchWindowExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssertXpathCountCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssignIdAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_AssignIdCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_BreakCommand.cs" />
+    <Compile Include="TestCommands\CheckAndWaitCommand.cs" />
+    <Compile Include="TestCommands\ChooseOkOnNextConfirmationAndWaitCommand.cs" />
+    <Compile Include="TestCommands\ClickAtAndWaitCommand.cs" />
+    <Compile Include="TestCommands\ClickAtCommand.cs" />
+    <Compile Include="TestCommands\ContextMenuAndWaitCommand.cs" />
+    <Compile Include="TestCommands\ContextMenuAtAndWaitCommand.cs" />
+    <Compile Include="TestCommands\ContextMenuAtCommand.cs" />
+    <Compile Include="TestCommands\ContextMenuCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_ControlKeyDownAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_ControlKeyDownCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_ControlKeyUpAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_ControlKeyUpCommand.cs" />
+    <Compile Include="TestCommands\CreateCookieAndWaitCommand.cs" />
+    <Compile Include="TestCommands\CreateCookieCommand.cs" />
+    <Compile Include="TestCommands\DeleteAllVisibleCookiesAndWaitCommand.cs" />
+    <Compile Include="TestCommands\DeleteAllVisibleCookiesCommand.cs" />
+    <Compile Include="TestCommands\DeleteCookieAndWaitCommand.cs" />
+    <Compile Include="TestCommands\DeleteCookieCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_DeselectPopUpAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_DeselectPopUpCommand.cs" />
+    <Compile Include="TestCommands\DoubleClickAndWaitCommand.cs" />
+    <Compile Include="TestCommands\DoubleClickAtAndWaitCommand.cs" />
+    <Compile Include="TestCommands\DoubleClickAtCommand.cs" />
+    <Compile Include="TestCommands\DoubleClickCommand.cs" />
+    <Compile Include="TestCommands\DragAndDropAndWaitCommand.cs" />
+    <Compile Include="TestCommands\DragAndDropCommand.cs" />
+    <Compile Include="TestCommands\DragAndDropToObjectAndWaitCommand.cs" />
+    <Compile Include="TestCommands\DragAndDropToObjectCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_FireEventAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_FireEventCommand.cs" />
+    <Compile Include="TestCommands\FocusAndWaitCommand.cs" />
+    <Compile Include="TestCommands\FocusCommand.cs" />
+    <Compile Include="TestCommands\GoBackAndWaitCommand.cs" />
+    <Compile Include="TestCommands\GotoIfCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_HighlightAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_HighlightCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_IgnoreAttributesWithoutValueAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_IgnoreAttributesWithoutValueCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_KeyDownAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_KeyDownCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_KeyPressAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_KeyPressCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_KeyUpAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_KeyUpCommand.cs" />
+    <Compile Include="TestCommands\LabelCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MetaKeyDownAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MetaKeyDownCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MetaKeyUpAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MetaKeyUpCommand.cs" />
+    <Compile Include="TestCommands\MouseDownAndWaitCommand.cs" />
+    <Compile Include="TestCommands\MouseDownAtAndWaitCommand.cs" />
+    <Compile Include="TestCommands\MouseDownAtCommand.cs" />
+    <Compile Include="TestCommands\MouseDownCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseDownRightAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseDownRightAtAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseDownRightAtCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseDownRightCommand.cs" />
+    <Compile Include="TestCommands\MouseMoveAndWaitCommand.cs" />
+    <Compile Include="TestCommands\MouseMoveAtAndWaitCommand.cs" />
+    <Compile Include="TestCommands\MouseMoveAtCommand.cs" />
+    <Compile Include="TestCommands\MouseMoveCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseOutAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseOutCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseOverAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseOverCommand.cs" />
+    <Compile Include="TestCommands\MouseUpAndWaitCommand.cs" />
+    <Compile Include="TestCommands\MouseUpAtAndWaitCommand.cs" />
+    <Compile Include="TestCommands\MouseUpAtCommand.cs" />
+    <Compile Include="TestCommands\MouseUpCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseUpRightAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseUpRightAtAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseUpRightAtCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_MouseUpRightCommand.cs" />
+    <Compile Include="TestCommands\OpenWindowAndWaitCommand.cs" />
+    <Compile Include="TestCommands\OpenWindowCommand.cs" />
+    <Compile Include="TestCommands\RefreshAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RemoveAllSelectionsAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RemoveAllSelectionsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RemoveScriptAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RemoveScriptCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RemoveSelectionAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RemoveSelectionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RollupAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RollupCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_RunScriptAndWaitCommand.cs" />
+    <Compile Include="TestCommands\RunScriptCommand.cs" />
+    <Compile Include="TestCommands\SelectAndWaitCommand.cs" />
+    <Compile Include="TestCommands\SelectPopUpAndWaitCommand.cs" />
+    <Compile Include="TestCommands\SelectPopUpCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_SetBrowserLogLevelAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_SetBrowserLogLevelCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_SetCursorPositionAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_SetCursorPositionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_SetMouseSpeedAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_SetMouseSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_SetSpeedAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_SetSpeedCommand.cs" />
+    <Compile Include="TestCommands\SetTimeoutCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_ShiftKeyDownAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_ShiftKeyDownCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_ShiftKeyUpAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_ShiftKeyUpCommand.cs" />
+    <Compile Include="TestCommands\StoreAlertCommand.cs" />
+    <Compile Include="TestCommands\StoreAlertPresentCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreAllButtonsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreAllFieldsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreAllLinksCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreAllWindowIdsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreAllWindowNamesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreAllWindowTitlesCommand.cs" />
+    <Compile Include="TestCommands\StoreAttributeCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreAttributeFromAllWindowsCommand.cs" />
+    <Compile Include="TestCommands\StoreBodyTextCommand.cs" />
+    <Compile Include="TestCommands\StoreCheckedCommand.cs" />
+    <Compile Include="TestCommands\StoreConfirmationCommand.cs" />
+    <Compile Include="TestCommands\StoreConfirmationPresentCommand.cs" />
+    <Compile Include="TestCommands\StoreCookieByNameCommand.cs" />
+    <Compile Include="TestCommands\StoreCookieCommand.cs" />
+    <Compile Include="TestCommands\StoreCookiePresentCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreCursorPositionCommand.cs" />
+    <Compile Include="TestCommands\StoreEditableCommand.cs" />
+    <Compile Include="TestCommands\StoreElementHeightCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreElementIndexCommand.cs" />
+    <Compile Include="TestCommands\StoreElementPositionLeftCommand.cs" />
+    <Compile Include="TestCommands\StoreElementPositionTopCommand.cs" />
+    <Compile Include="TestCommands\StoreElementPresentCommand.cs" />
+    <Compile Include="TestCommands\StoreElementWidthCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreEvalCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreHtmlSourceCommand.cs" />
+    <Compile Include="TestCommands\StoreLocationCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreMouseSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreOrderedCommand.cs" />
+    <Compile Include="TestCommands\StorePromptCommand.cs" />
+    <Compile Include="TestCommands\StorePromptPresentCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectedIdCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectedIdsCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectedIndexCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectedIndexesCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectedLabelCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectedLabelsCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectedValueCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectedValuesCommand.cs" />
+    <Compile Include="TestCommands\StoreSelectOptionsCommand.cs" />
+    <Compile Include="TestCommands\StoreSomethingSelectedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreTableCommand.cs" />
+    <Compile Include="TestCommands\StoreTextPresentCommand.cs" />
+    <Compile Include="TestCommands\StoreTitleCommand.cs" />
+    <Compile Include="TestCommands\StoreVisibleCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreWhetherThisFrameMatchFrameExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreWhetherThisWindowMatchWindowExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_StoreXpathCountCommand.cs" />
+    <Compile Include="TestCommands\SubmitAndWaitCommand.cs" />
+    <Compile Include="TestCommands\TypeAndWaitCommand.cs" />
+    <Compile Include="TestCommands\TypeCommand.cs" />
+    <Compile Include="TestCommands\TypeKeysAndWaitCommand.cs" />
+    <Compile Include="TestCommands\TypeKeysCommand.cs" />
+    <Compile Include="TestCommands\UncheckAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_UseXpathLibraryAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_UseXpathLibraryCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyAllButtonsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyAllFieldsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyAllLinksCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyAllWindowIdsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyAllWindowNamesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyAllWindowTitlesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyAttributeFromAllWindowsCommand.cs" />
+    <Compile Include="TestCommands\VerifyBodyTextCommand.cs" />
+    <Compile Include="TestCommands\VerifyConfirmationCommand.cs" />
+    <Compile Include="TestCommands\VerifyConfirmationNotPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyConfirmationPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyCookieByNameCommand.cs" />
+    <Compile Include="TestCommands\VerifyCookieCommand.cs" />
+    <Compile Include="TestCommands\VerifyCookieNotPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyCookiePresentCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyCursorPositionCommand.cs" />
+    <Compile Include="TestCommands\VerifyEditableCommand.cs" />
+    <Compile Include="TestCommands\VerifyElementHeightCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyElementIndexCommand.cs" />
+    <Compile Include="TestCommands\VerifyElementPositionLeftCommand.cs" />
+    <Compile Include="TestCommands\VerifyElementPositionTopCommand.cs" />
+    <Compile Include="TestCommands\VerifyElementWidthCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyEvalCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyHtmlSourceCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyMouseSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotAllButtonsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotAllFieldsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotAllLinksCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotAllWindowIdsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotAllWindowNamesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotAllWindowTitlesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotAttributeFromAllWindowsCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotBodyTextCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotCheckedCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotConfirmationCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotCookieByNameCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotCookieCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotCursorPositionCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotEditableCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotElementHeightCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotElementIndexCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotElementPositionLeftCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotElementPositionTopCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotElementWidthCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotEvalCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotHtmlSourceCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotMouseSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotOrderedCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotPromptCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectedIdCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectedIdsCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectedIndexCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectedIndexesCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectedLabelCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectedLabelsCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectedValueCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectedValuesCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSelectOptionsCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotSomethingSelectedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotTableCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotWhetherThisFrameMatchFrameExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotWhetherThisWindowMatchWindowExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyNotXpathCountCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyOrderedCommand.cs" />
+    <Compile Include="TestCommands\VerifyPromptCommand.cs" />
+    <Compile Include="TestCommands\VerifyPromptNotPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyPromptPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectedIdCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectedIdsCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectedIndexCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectedLabelCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectedLabelsCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectedValueCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectedValuesCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectOptionsCommand.cs" />
+    <Compile Include="TestCommands\VerifySomethingSelectedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifySpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyTableCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyWhetherThisFrameMatchFrameExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyWhetherThisWindowMatchWindowExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_VerifyXpathCountCommand.cs" />
+    <Compile Include="TestCommands\WaitForAlertCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForAllButtonsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForAllFieldsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForAllLinksCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForAllWindowIdsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForAllWindowNamesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForAllWindowTitlesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForAttributeFromAllWindowsCommand.cs" />
+    <Compile Include="TestCommands\WaitForBodyTextCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForConditionCommand.cs" />
+    <Compile Include="TestCommands\WaitForConfirmationCommand.cs" />
+    <Compile Include="TestCommands\WaitForConfirmationNotPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForConfirmationPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForCookieByNameCommand.cs" />
+    <Compile Include="TestCommands\WaitForCookieCommand.cs" />
+    <Compile Include="TestCommands\WaitForCookieNotPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForCookiePresentCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForCursorPositionCommand.cs" />
+    <Compile Include="TestCommands\WaitForEditableCommand.cs" />
+    <Compile Include="TestCommands\WaitForElementHeightCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForElementIndexCommand.cs" />
+    <Compile Include="TestCommands\WaitForElementPositionLeftCommand.cs" />
+    <Compile Include="TestCommands\WaitForElementPositionTopCommand.cs" />
+    <Compile Include="TestCommands\WaitForElementWidthCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForEvalCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForExpressionCommand.cs" />
+    <Compile Include="TestCommands\WaitForFrameToLoadCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForHtmlSourceCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForMouseSpeedCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotAlertCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotAllButtonsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotAllFieldsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotAllLinksCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotAllWindowIdsCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotAllWindowNamesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotAllWindowTitlesCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotAttributeFromAllWindowsCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotBodyTextCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotCheckedCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotConfirmationCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotCookieByNameCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotCookieCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotCursorPositionCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotEditableCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotElementHeightCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotElementIndexCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotElementPositionLeftCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotElementPositionTopCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotElementWidthCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotEvalCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotHtmlSourceCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotMouseSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotOrderedCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotPromptCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectedIdCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectedIdsCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectedIndexCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectedIndexesCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectedLabelCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectedLabelsCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectedValueCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectedValuesCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSelectOptionsCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotSomethingSelectedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotTableCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotWhetherThisFrameMatchFrameExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotWhetherThisWindowMatchWindowExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForNotXpathCountCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForOrderedCommand.cs" />
+    <Compile Include="TestCommands\WaitForPageToLoadCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForPopUpCommand.cs" />
+    <Compile Include="TestCommands\WaitForPromptCommand.cs" />
+    <Compile Include="TestCommands\WaitForPromptNotPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForPromptPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectedIdCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectedIdsCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectedIndexCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectedIndexesCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectedLabelCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectedLabelsCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectedValueCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectedValuesCommand.cs" />
+    <Compile Include="TestCommands\WaitForSelectOptionsCommand.cs" />
+    <Compile Include="TestCommands\WaitForSomethingSelectedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForSpeedCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForTableCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForWhetherThisFrameMatchFrameExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForWhetherThisWindowMatchWindowExpressionCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WaitForXpathCountCommand.cs" />
+    <Compile Include="TestCommands\WhileCommand.cs" />
+    <Compile Include="TestCommands\EndWhileCommand.cs" />
+    <Compile Include="TestCommands\EchoCommand.cs" />
+    <Compile Include="TestCommands\GotoLabelCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WindowFocusAndWaitCommand.cs" />
+    <Compile Include="TestCommands\NotSupprted\x_WindowFocusCommand.cs" />
+    <Compile Include="TestCommands\WindowMaximizeCommand.cs" />
+    <Compile Include="TestCommands\AssertAlertPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertAlertNotPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForAlertPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForAlertNotPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertAttributeCommand.cs" />
+    <Compile Include="TestCommands\AssertNotAttributeCommand.cs" />
+    <Compile Include="TestCommands\WaitForAttributeCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotAttributeCommand.cs" />
+    <Compile Include="TestCommands\WindowMaximizeAndWaitCommand.cs" />
+    <Compile Include="TestCommands\VerifyAlertNotPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyAlertCommand.cs" />
+    <Compile Include="TestCommands\VerifyAlertPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyAttributeCommand.cs" />
+    <Compile Include="TestCommands\VerifyCheckedCommand.cs" />
+    <Compile Include="TestCommands\VerifyElementNotPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyElementPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyLocationCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotAttributeCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotLocationCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotTextCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotTitleCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotValueCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotVisibleCommand.cs" />
+    <Compile Include="TestCommands\VerifyTextCommand.cs" />
+    <Compile Include="TestCommands\VerifyTextNotPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyTextPresentCommand.cs" />
+    <Compile Include="TestCommands\VerifyTitleCommand.cs" />
+    <Compile Include="TestCommands\VerifyValueCommand.cs" />
+    <Compile Include="TestCommands\VerifyVisibleCommand.cs" />
+    <Compile Include="TestCommands\AssertNotAlertCommand.cs" />
+    <Compile Include="TestCommands\VerifyNotAlertCommand.cs" />
+    <Compile Include="TestCommands\CaptureEntirePageScreenshotCommand.cs" />
+    <Compile Include="TestCommands\CaptureEntirePageScreenshotAndWaitCommand.cs" />
+    <Compile Include="TestCommands\VerifySelectedIndexesCommand.cs" />
+    <Compile Include="TestCommands\GoForwardAndWaitCommand.cs" />
+    <Compile Include="TestData.cs" />
+    <Compile Include="TestStep.cs" />
+    <Compile Include="TestCommands\StoreValueCommand.cs" />
+    <Compile Include="TestCommands\StoreCommand.cs" />
+    <Compile Include="TestCommands\StoreTextCommand.cs" />
+    <Compile Include="ITestCommand.cs" />
+    <Compile Include="ITestCase.cs" />
+    <Compile Include="IWorkbookContext.cs" />
+    <Compile Include="ListObjectHelper.cs" />
+    <Compile Include="ListRowHelper.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MessageDialog.cs" />
+    <Compile Include="ObservableObject.cs" />
+    <Compile Include="ProgressCalc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SortableBindingList.cs" />
+    <Compile Include="SynchronizationDispatcher.cs" />
+    <Compile Include="TestCommandCompiler.cs" />
+    <Compile Include="TestStepCollection.cs" />
+    <Compile Include="TestSequence.cs" />
+    <Compile Include="TestContextImpl.cs" />
+    <Compile Include="TestDataSequence.cs" />
+    <Compile Include="TestResult.cs" />
+    <Compile Include="TestResultLabel.cs" />
+    <Compile Include="TestRunner.cs" />
+    <Compile Include="TestCase.cs" />
+    <Compile Include="TestCaseCollection.cs" />
+    <Compile Include="TestCaseSettings.cs" />
+    <Compile Include="CustomToolStripRenderer.cs" />
+    <Compile Include="TextPattern.cs" />
+    <Compile Include="Tools\ReferenceConverter.cs" />
+    <Compile Include="View\BaseUrlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BaseUrlForm.Designer.cs">
+      <DependentUpon>BaseUrlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HelpPaneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\HelpPaneControl.Designer.cs">
+      <DependentUpon>HelpPaneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListPaneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ListPaneControl.Designer.cs">
+      <DependentUpon>ListPaneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TestRunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TestRunForm.Designer.cs">
+      <DependentUpon>TestRunForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\VersionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VersionForm.Designer.cs">
+      <DependentUpon>VersionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebDriverFactory.cs" />
+    <Compile Include="WindowContext.cs" />
+    <Compile Include="WindowContextManager2010.cs" />
+    <Compile Include="WindowContextManager2013.cs" />
+    <Compile Include="WindowContextManager.cs" />
+    <Compile Include="WorkbookContext.cs" />
+    <Compile Include="WorkbookContextSettings.cs" />
+    <Compile Include="TestVerifyFailedException.cs" />
+    <Compile Include="DisableDisplayAlert.cs" />
+    <Compile Include="WindowContextNull.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recorder\RecordingForm.resx">
+      <DependentUpon>RecordingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ribbon1.ja-JP.resx">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ribbon1.resx">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestCommandResource.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestCommandResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BaseUrlForm.resx">
+      <DependentUpon>BaseUrlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HelpPaneControl.resx">
+      <DependentUpon>HelpPaneControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListPaneControl.ja-JP.resx">
+      <DependentUpon>ListPaneControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListPaneControl.resx">
+      <DependentUpon>ListPaneControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestRunForm.ja-JP.resx">
+      <DependentUpon>TestRunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestRunForm.resx">
+      <DependentUpon>TestRunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VersionForm.ja-JP.resx">
+      <DependentUpon>VersionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VersionForm.resx">
+      <DependentUpon>VersionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Ribbon1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon1.Designer.cs">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestCommands\AssertAlertCommand.cs" />
+    <Compile Include="TestCommands\AssertCheckedCommand.cs" />
+    <Compile Include="TestCommands\AssertElementNotPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertElementPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertLocationCommand.cs" />
+    <Compile Include="TestCommands\AssertNotLocationCommand.cs" />
+    <Compile Include="TestCommands\AssertNotTextCommand.cs" />
+    <Compile Include="TestCommands\AssertNotTitleCommand.cs" />
+    <Compile Include="TestCommands\AssertNotValueCommand.cs" />
+    <Compile Include="TestCommands\AssertNotVisibleCommand.cs" />
+    <Compile Include="TestCommands\AssertTextCommand.cs" />
+    <Compile Include="TestCommands\AssertTextNotPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertTextPresentCommand.cs" />
+    <Compile Include="TestCommands\AssertTitleCommand.cs" />
+    <Compile Include="TestCommands\AssertValueCommand.cs" />
+    <Compile Include="TestCommands\AssertVisibleCommand.cs" />
+    <Compile Include="TestCommands\CheckCommand.cs" />
+    <Compile Include="TestCommands\ChooseCancelOnNextConfirmationCommand.cs" />
+    <Compile Include="TestCommands\ChooseOkOnNextConfirmationCommand.cs" />
+    <Compile Include="TestCommands\ClickAndWaitCommand.cs" />
+    <Compile Include="TestCommands\ClickCommand.cs" />
+    <Compile Include="TestCommands\CloseCommand.cs" />
+    <Compile Include="TestCommands\GoBackCommand.cs" />
+    <Compile Include="TestCommands\GoForwardCommand.cs" />
+    <Compile Include="TestCommands\OpenCommand.cs" />
+    <Compile Include="TestCommands\PauseCommand.cs" />
+    <Compile Include="TestCommands\RefreshCommand.cs" />
+    <Compile Include="TestCommands\SelectCommand.cs" />
+    <Compile Include="TestCommands\SelectFrameCommand.cs" />
+    <Compile Include="TestCommands\SelectWindowCommand.cs" />
+    <Compile Include="TestCommands\SendKeysCommand.cs" />
+    <Compile Include="TestCommands\SubmitCommand.cs" />
+    <Compile Include="TestCommands\UncheckCommand.cs" />
+    <Compile Include="TestCommands\VbaCommand.cs" />
+    <Compile Include="TestCommands\WaitForCheckedCommand.cs" />
+    <Compile Include="TestCommands\WaitForElementNotPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForElementPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForLocationCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotLocationCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotTextCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotTitleCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotValueCommand.cs" />
+    <Compile Include="TestCommands\WaitForNotVisibleCommand.cs" />
+    <Compile Include="TestCommands\WaitForTextCommand.cs" />
+    <Compile Include="TestCommands\WaitForTextNotPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForTextPresentCommand.cs" />
+    <Compile Include="TestCommands\WaitForTitleCommand.cs" />
+    <Compile Include="TestCommands\WaitForValueCommand.cs" />
+    <Compile Include="TestCommands\WaitForVisibleCommand.cs" />
+    <Compile Include="ThisAddIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Resources\log4net_release.config" />
+    <None Include="Resources\log4net_debug.config" />
+    <None Include="SeleniumExcelAddIn.pfx" />
+    <None Include="ThisAddIn.Designer.xml">
+      <DependentUpon>ThisAddIn.cs</DependentUpon>
+    </None>
+    <Compile Include="ThisAddIn.Designer.cs">
+      <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_side_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iexplore_9.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firefox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chrome.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_side_list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bit32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_lightning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_lightning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cricket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset_previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_play_blue32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_end_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_cursor_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_imports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\Selenium.WebDriver.ChromeDriver.2.9.0.0\content\chromedriver.exe">
+      <Link>chromedriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Selenium.WebDriver.IEDriver.2.41.0.0\content\IEDriverServer.exe">
+      <Link>IEDriverServer.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\sizzle.txt" />
+    <None Include="Resources\selenium_reference.html" />
+    <None Include="Resources\web_layout.png" />
+    <None Include="Resources\spellcheck_error.png" />
+    <None Include="Resources\spellcheck.png" />
+    <None Include="Resources\insert_citation1.png" />
+    <None Include="Resources\insert_citation.png" />
+    <None Include="Resources\page_white_code.png" />
+    <None Include="Resources\camera_add.png" />
+    <None Include="Resources\camera_delete.png" />
+    <None Include="Resources\app_icon.ico" />
+    <None Include="Resources\application_side_list2.png" />
+    <Content Include="Resources\control_play_blue.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\link.png" />
+    <None Include="Resources\table.png" />
+    <None Include="Resources\table_link.png" />
+    <None Include="Resources\link_break.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\check_boxes.png" />
+    <None Include="Resources\bullet_yellow.png" />
+    <None Include="Resources\blank16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project. -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- Include additional build rules for an Office application add-in. -->
+  <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- This section defines VSTO properties that describe the host-changeable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
+        <ProjectProperties HostName="Excel" HostPackage="{20A848B8-E01F-4801-962E-25DB0FF57389}" OfficeVersion="14.0" VstxVersion="4.0" ApplicationType="Excel" Language="cs" TemplatesPath="VSTOTemplates" DebugInfoExeName="#Software\Microsoft\Office\14.0\Excel\InstallRoot\Path#excel.exe" AddItemTemplatesGuid="{51063C3A-E220-4D12-8922-BDA915ACD783}" />
+        <Host Name="Excel" GeneratedCodeNamespace="SeleniumExcelAddIn" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
+          <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" PublishedHash="51AB02317C9ED3FC8F5C097C1C3401B245C6E731" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
+        </Host>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューターにはない NuGet パッケージを参照しています。これらをダウンロードするには、NuGet パッケージの復元を有効にしてください。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。不足しているファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <PropertyGroup Label="DownloadChromeDriverBuildTask">
+    <CoreBuildDependsOn>DownloadChromeDriver;$(CoreBuildDependsOn)</CoreBuildDependsOn>
+    <ChromeDriverInstallPath>$(SolutionDir)packages\Selenium.WebDriver.ChromeDriver.2.9.0.0\</ChromeDriverInstallPath>
+    <ChromeDriverToolsPath>$(ChromeDriverInstallPath)tools\</ChromeDriverToolsPath>
+    <ChromeDriverInitScriptPath>$(ChromeDriverToolsPath)Init.ps1</ChromeDriverInitScriptPath>
+    <ChromeDriverPath>$(ChromeDriverInstallPath)content\chromedriver.exe</ChromeDriverPath>
+    <PowerShellExe Condition="'$(PowerShellExe)'==''">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+  </PropertyGroup>
+  <Target Name="DownloadChromeDriver" Label="DownloadChromeDriverBuildTask">
+    <Exec Condition="!Exists('$(ChromeDriverPath)')" Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &amp;'$(ChromeDriverInitScriptPath)' '$(ChromeDriverInstallPath)' '$(ChromeDriverToolsPath)'} &quot;" />
+  </Target>
+  <PropertyGroup Label="DownloadIEDriverBuildTask">
+    <CoreBuildDependsOn>DownloadIEDriver;$(CoreBuildDependsOn)</CoreBuildDependsOn>
+    <IEDriverInstallPath>$(SolutionDir)packages\Selenium.WebDriver.IEDriver.2.41.0.0\</IEDriverInstallPath>
+    <IEDriverToolsPath>$(IEDriverInstallPath)tools\</IEDriverToolsPath>
+    <IEDriverInitScriptPath>$(IEDriverToolsPath)Init.ps1</IEDriverInitScriptPath>
+    <IEDriverPath>$(IEDriverInstallPath)content\IEDriverServer.exe</IEDriverPath>
+    <PowerShellExe Condition="'$(PowerShellExe)'==''">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+  </PropertyGroup>
+  <Target Name="DownloadIEDriver" Label="DownloadIEDriverBuildTask">
+    <Exec Condition="!Exists('$(IEDriverPath)')" Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &amp;'$(IEDriverInitScriptPath)' '$(IEDriverInstallPath)' '$(IEDriverToolsPath)'} &quot;" />
+  </Target>
+</Project>

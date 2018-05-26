@@ -1,0 +1,29 @@
+        #region ${name}
+
+        [TestMethod]
+        [TestCategory("TestCommand")]
+        public void ${name}1()
+        {
+            var cmd = new ${name}Command();
+            var flag = cmd.SyntaxFlags;
+        }
+
+        [TestMethod]
+        [TestCategory("TestCommand")]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void ${name}2()
+        {
+            var cmd = new ${name}Command();
+            cmd.Execute(null);
+        }
+
+        [TestMethod]
+        [TestCategory("TestCommand")]
+        public void ${name}3()
+        {
+            var cmd = new ${name}Command();
+            cmd.Execute(context);
+        }
+
+        #endregion
+        

@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="text_imports" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_imports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Recorder_NoSuchElement" xml:space="preserve">
+    <value>No Such Element ={0}</value>
+  </data>
+  <data name="BaseUrlInvalid" xml:space="preserve">
+    <value>Invalid Url</value>
+  </data>
+  <data name="log4net_debug" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\log4net_debug.config;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="WebDriverFactory_NotSupportedDriverType" xml:space="preserve">
+    <value>Not Supported WebDriver Type = "{0}"</value>
+    <comment>サポートしていないWebDriver</comment>
+  </data>
+  <data name="control_cursor_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\control_cursor_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ListPaneStatusBar_ErrorFormat" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="iexplore_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iexplore_9.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoSuchDataName" xml:space="preserve">
+    <value>No Such Data Column Name = {0}</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Selenium Excel AddIn</value>
+    <comment>アプリケーションの名称</comment>
+  </data>
+  <data name="CommandNameIsEmpty" xml:space="preserve">
+    <value>Command is empty.</value>
+  </data>
+  <data name="CancelTestRun" xml:space="preserve">
+    <value>TestRunning Cancel ?</value>
+  </data>
+  <data name="Progress_Mins" xml:space="preserve">
+    <value>Remaining Time: {0} Minutes {1} Seconds.</value>
+    <comment>進捗表示の書式（分）</comment>
+  </data>
+  <data name="table_lightning32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table_lightning1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ActionValidator_NotListObjectDataBody" xml:space="preserve">
+    <value>No Data Body.</value>
+  </data>
+  <data name="TestIsEmpty" xml:space="preserve">
+    <value>Test is empty.</value>
+  </data>
+  <data name="tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TestResult_Passed" xml:space="preserve">
+    <value>Passed</value>
+    <comment>テスト結果「成功」の表示文字列</comment>
+  </data>
+  <data name="world_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world_go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TestResult_Skipped" xml:space="preserve">
+    <value>skipped</value>
+    <comment>テスト結果「スキップ」の表示文字列</comment>
+  </data>
+  <data name="Action_Run_Failed" xml:space="preserve">
+    <value>Failed.</value>
+  </data>
+  <data name="NoSuchAlert" xml:space="preserve">
+    <value>No Such Alert Dialog.</value>
+  </data>
+  <data name="ActionValidator_WorkbookNotPresent" xml:space="preserve">
+    <value>Workbook Not Opened.</value>
+  </data>
+  <data name="link" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\link.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="selenium_reference" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\selenium_reference.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="insert_citation1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insert_citation1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blank16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blank16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Progress_Secs" xml:space="preserve">
+    <value>Remaining Time: {0} Seconds.</value>
+    <comment>進捗表示の書式（秒）</comment>
+  </data>
+  <data name="ListColumnName_Command" xml:space="preserve">
+    <value>Command</value>
+    <comment>シナリオペインのグリッドの列名</comment>
+  </data>
+  <data name="ReportColumnResult" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="EviPane_Title" xml:space="preserve">
+    <value>Evidence</value>
+  </data>
+  <data name="TestResult_None" xml:space="preserve">
+    <value />
+    <comment>テスト結果「無し」の表示文字列</comment>
+  </data>
+  <data name="CheckNewVersion1" xml:space="preserve">
+    <value>New version {0} released.
+Click here to download</value>
+  </data>
+  <data name="Evidence_Title" xml:space="preserve">
+    <value>PageTitle</value>
+  </data>
+  <data name="InvaildAttributeLocator" xml:space="preserve">
+    <value>Invalid Attribute Locator. (e.g "element@attr")</value>
+  </data>
+  <data name="ListPane_Title" xml:space="preserve">
+    <value>TestCase List</value>
+    <comment>シナリオペインのタイトル</comment>
+  </data>
+  <data name="Homepage" xml:space="preserve">
+    <value>http://selenium-excel-addin.jpn.org</value>
+    <comment>ウェブサイトのＵＲＬ</comment>
+  </data>
+  <data name="ActionValidator_NoSuchListObject" xml:space="preserve">
+    <value>No Such Scenario(ListObject)</value>
+  </data>
+  <data name="table_link" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table_link.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssertError" xml:space="preserve">
+    <value>Assertion Error</value>
+  </data>
+  <data name="Evidence_Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="ListColumnName_Result" xml:space="preserve">
+    <value>Result</value>
+    <comment>シナリオペインのグリッドの列名</comment>
+  </data>
+  <data name="log4net_release" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\log4net_release.config;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="chromedriver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\packages\selenium.webdriver.chromedriver.2.9.0.0\content\chromedriver.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ListColumnName_Value" xml:space="preserve">
+    <value>Value</value>
+    <comment>シナリオペインのグリッドの列名</comment>
+  </data>
+  <data name="web_layout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\web_layout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ActionValidator_WorkbookEditable" xml:space="preserve">
+    <value>Workbook is Protectedted.</value>
+  </data>
+  <data name="blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spellcheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spellcheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="page_white_code" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page_white_code.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="page_world" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page_world.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TestResult_Failed" xml:space="preserve">
+    <value>Failed</value>
+    <comment>テスト結果「失敗」の表示文字列</comment>
+  </data>
+  <data name="camera_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resultset_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resultset_next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check_boxes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check_boxes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ActionValidator_WorkbookReadonly" xml:space="preserve">
+    <value>Workbook is Read-Only.</value>
+  </data>
+  <data name="ListPaneStatusBar_SuccessFormat" xml:space="preserve">
+    <value>Success: {0}</value>
+  </data>
+  <data name="ActionValidator_WorksheetNotPresent" xml:space="preserve">
+    <value>Worksheet Not Opened.</value>
+  </data>
+  <data name="camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssertExpectedAndActual" xml:space="preserve">
+    <value>Expected = "{0}", Actual = "{1}"</value>
+  </data>
+  <data name="NoSuchSelectById" xml:space="preserve">
+    <value>Option element ID specified by "{0}" does not exist</value>
+    <comment>指定されたIDのOption要素は存在しない</comment>
+  </data>
+  <data name="BaseUrl" xml:space="preserve">
+    <value>BaseUrl</value>
+  </data>
+  <data name="database_lightning1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_lightning1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoSuchCommand" xml:space="preserve">
+    <value>No Such Command</value>
+  </data>
+  <data name="ReportColumnTestCase" xml:space="preserve">
+    <value>TestCase</value>
+  </data>
+  <data name="TestCommand_Validate_RequireTarget" xml:space="preserve">
+    <value>Target Required.</value>
+  </data>
+  <data name="Evidence_Command" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="ImportTestcaseNoSuchProfile" xml:space="preserve">
+    <value>This file is not TestCase of Selenium IDE.</value>
+  </data>
+  <data name="IEDriverServer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\packages\selenium.webdriver.iedriver.2.41.0.0\content\iedriverserver.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="table" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NotInstalledWebBrowser" xml:space="preserve">
+    <value>Not Installed {0}</value>
+  </data>
+  <data name="TestDataMenuItem_Text" xml:space="preserve">
+    <value>(None)</value>
+    <comment>テストデータのバインド解除するメニューの文字列</comment>
+  </data>
+  <data name="Evidence_ErrorMessage" xml:space="preserve">
+    <value>ErrorMessage</value>
+  </data>
+  <data name="TestRunner_AlreadyRunning" xml:space="preserve">
+    <value>Already Test Running.</value>
+    <comment>テストを既に実行中</comment>
+  </data>
+  <data name="app_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\app_icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bin_closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bin_closed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HelpPaneTitle" xml:space="preserve">
+    <value>Selenium Reference</value>
+  </data>
+  <data name="ListColumnName_Evidence" xml:space="preserve">
+    <value>Evidence</value>
+    <comment>シナリオペインのグリッドの列名</comment>
+  </data>
+  <data name="cricket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cricket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insert_citation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insert_citation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScenarioIsNotSelected" xml:space="preserve">
+    <value>TestCase is not selected.</value>
+  </data>
+  <data name="AssertExpected" xml:space="preserve">
+    <value>Expected = "{0}"</value>
+  </data>
+  <data name="control_play_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\control_play_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ActionManager_GetActionId_Error" xml:space="preserve">
+    <value>Undefined Action = {0}</value>
+  </data>
+  <data name="CompilerError" xml:space="preserve">
+    <value>Test Command Compile Errors</value>
+  </data>
+  <data name="ImportTestcaseDialogTitle" xml:space="preserve">
+    <value>Import Selenium IDE Testcase</value>
+  </data>
+  <data name="chrome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chrome.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resultset_previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resultset_previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Evidence_Time" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="firefox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\firefox.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Prefix_Data" xml:space="preserve">
+    <value>TestData_</value>
+    <comment>テストデータの命名規則の前置詞</comment>
+  </data>
+  <data name="link_break" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\link_break.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="table_lightning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table_lightning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppDir" xml:space="preserve">
+    <value>SeleniumExcelAddIn</value>
+    <comment>アプリケーションのデータを格納するディレクトリ</comment>
+  </data>
+  <data name="Prefix_Scenario" xml:space="preserve">
+    <value>TestCase_</value>
+    <comment>テストケースの命名規則の前置詞</comment>
+  </data>
+  <data name="SyntaxCheckSuccess" xml:space="preserve">
+    <value>Syntax Check Successed.</value>
+  </data>
+  <data name="Prefix_Evidence" xml:space="preserve">
+    <value>Evidence_</value>
+    <comment>エビデンスの命名規則の前置詞</comment>
+  </data>
+  <data name="ListColumnName_Target" xml:space="preserve">
+    <value>Target</value>
+    <comment>シナリオペインのグリッドの列名</comment>
+  </data>
+  <data name="PauseTimeOver" xml:space="preserve">
+    <value>Pause up to 60 minutes</value>
+  </data>
+  <data name="spellcheck_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spellcheck_error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database_lightning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_lightning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Evidence_Browser" xml:space="preserve">
+    <value>Browser</value>
+  </data>
+  <data name="control_end_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\control_end_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Progress_Hours" xml:space="preserve">
+    <value>Remaining Time: {0} Hours {1} Minutes.</value>
+    <comment>進捗表示の書式（時間）</comment>
+  </data>
+  <data name="NoSuchVar" xml:space="preserve">
+    <value>No Such Variable = {0}</value>
+  </data>
+  <data name="Action_DeleteEvidenceAll_Confirm" xml:space="preserve">
+    <value>Delete All Evidence ?</value>
+    <comment>エビデンスを全て削除する際の確認メッセージ</comment>
+  </data>
+  <data name="ListColumnName_ErrorMessage" xml:space="preserve">
+    <value>Error Message</value>
+    <comment>シナリオペインのグリッドの列名</comment>
+  </data>
+  <data name="Evidence_Scenario" xml:space="preserve">
+    <value>TestScenario</value>
+  </data>
+  <data name="NoSuchCookie" xml:space="preserve">
+    <value>No Such Cookie ="{0}"</value>
+  </data>
+  <data name="Prefix_Result" xml:space="preserve">
+    <value>TestResult</value>
+  </data>
+  <data name="VerifyFailed" xml:space="preserve">
+    <value>Verify Failed. {0}</value>
+  </data>
+  <data name="SyntaxCheckFailed" xml:space="preserve">
+    <value>Syntax Check {0} Failed.</value>
+  </data>
+  <data name="camera_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Progress_Info" xml:space="preserve">
+    <value>Steps: {0} / {1} (Failed: {2})</value>
+    <comment>進捗表示の書式（情報）</comment>
+  </data>
+  <data name="control_play_blue32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\control_play_blue32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TestCommand_Validate_RequireValue" xml:space="preserve">
+    <value>Value Required.</value>
+  </data>
+  <data name="bullet_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ParseCoordStringError" xml:space="preserve">
+    <value>specifies the x,y position (i.e. "-10,20")</value>
+  </data>
+  <data name="Progress_Days" xml:space="preserve">
+    <value>Remaining Time: {0} Days {1} Hours.</value>
+    <comment>進捗表示の書式（日）</comment>
+  </data>
+  <data name="ReportColumnTestData" xml:space="preserve">
+    <value>TestData</value>
+  </data>
+  <data name="ActionValidator_NoSuchWorksheetContext" xml:space="preserve">
+    <value>No Such Test Scenarios.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://selenium-excel-addin.jpn.org/en/commands.html?addin</value>
+  </data>
+  <data name="AlreadyExistsListObject" xml:space="preserve">
+    <value>Already Exists Scenario.</value>
+  </data>
+  <data name="application_side_list" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_side_list2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
