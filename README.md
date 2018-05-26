@@ -9,3 +9,8 @@ For background, some useful reference links relating to the project (might need 
 
 * https://groups.google.com/forum/#!topic/seleniumjp/GQxQJpbtnHA
 * http://dolias2010.hatenablog.com/entry/2014/04/16/212429
+
+**NOTE:** on some alternatives to this project for Selenium and VBA/VBscript
+
+* http://florentbr.github.io/SeleniumBasic/ or https://github.com/florentbr/SeleniumBasic
+* http://htejera.users.sourceforge.net/vbswebdriver/, with a GH fork/clone at https://github.com/Amsoft-Systems/VBSWebDriverBeta
